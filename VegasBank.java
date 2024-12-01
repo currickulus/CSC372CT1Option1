@@ -132,7 +132,11 @@ public class VegasBank { //main class link to file
                     System.out.print("Enter withdrawal amount: ");
                     double withdrawalAmount = input.nextDouble();
                     input.nextLine(); // Consume newline
-                    selectedAccount.processWithdrawal(withdrawalAmount);
+                    try {
+                        selectedAccount.processWithdrawal(withdrawalAmount);
+                    } catch (InsufficientFundsException e) {
+                        throw new RuntimeException(e);
+                    }
                     break;
                 case 3://displays the current account value
                     selectedAccount.displayAccount();

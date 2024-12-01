@@ -46,7 +46,7 @@ public class BankAccount {//the checking account class inherits this class
         //well it's in here but everything is done in there
         return balance;
     }
-
+//This gets printed to the scrollpane in vegas bank Gui
     public String getAccountSummary() {  // Added for GUI output
         return "Account Summary:\n" +
                 "Name: " + firstName + " " + lastName + "\n" +
